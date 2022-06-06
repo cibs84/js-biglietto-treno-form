@@ -4,3 +4,21 @@
     margin: 0;
     padding: 0;
 }
+
+h1, h2 {
+    text-align: center;
+    margin: 2rem 0;
+}
+.form-ticket {
+    margin: 1.5rem 0;
+}
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+.data-output {
+    display: flex;
+}
+table {
+    border-spacing: 1.5rem;
+}
