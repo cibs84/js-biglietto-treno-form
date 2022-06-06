@@ -20,34 +20,40 @@
     <main>
 
         <!-- FORM -->
-        <section id="form-ticket">
+        <section id="calculate-ticket">
             <div class="container">
 
-                <!-- INPUT - Nome e Cognome -->
-                <div class="form-ticket">
-                    <label for="user-name">Nome Cognome</label>
-                    <input type="text" id="user-name">
-                </div>
+                <!-- Ticket Input -->
+                <div class="ticket-input">
 
-                <!-- INPUT - Km da percorrere -->
-                <div class="form-ticket">
-                    <label for="user-km">Km da percorrere</label>
-                    <input type="number" id="user-km">
-                </div>
+                    <!-- INPUT - Nome e Cognome -->
+                    <div class="form-ticket">
+                        <label for="user-name">Nome Cognome</label>
+                        <input type="text" id="user-name">
+                    </div>
 
-                <!-- INPUT - Fascia d'età -->
-                <div class="form-ticket">
-                    <label for="user-age">Fascia d'età</label>
-                    <select id="user-age" value="maggiorenne">
-                        <option value="maggiorenne">Maggiorenne</option>
-                        <option value="minorenne">Minorenne</option>
-                        <option value="over">Over 65</option>
-                    </select>
-                </div>
+                    <!-- INPUT - Km da percorrere -->
+                    <div class="form-ticket">
+                        <label for="user-km">Km da percorrere</label>
+                        <input type="number" id="user-km">
+                    </div>
 
-                <!-- BUTTONS - Genera e Annulla -->
-                <button id="generate-btn">Genera</button>
-                <button id="cancel-btn">Annulla</button>
+                    <!-- INPUT - Fascia d'età -->
+                    <div class="form-ticket">
+                        <label for="user-age">Fascia d'età</label>
+                        <select id="user-age" value="maggiorenne">
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="minorenne">Minorenne</option>
+                            <option value="over">Over 65</option>
+                        </select>
+                    </div>
+
+                    <!-- BUTTONS - Genera e Annulla -->
+                    <div class="btn-group">
+                        <button id="generate-btn">Genera</button>
+                        <button id="cancel-btn">Annulla</button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -57,37 +63,41 @@
         <section id="your-ticket">
                 <div class="container">
 
-                <!-- DATA OUTPUT -->
-                <h3>DETTAGLIO PASSEGGERI</h3>
-                <div class="data-output">
+                    <!-- Ticket Output -->
+                    <div class="ticket-output">
 
-                    <!-- Username Output -->
-                    <div>
-                        NOME DEL PASSEGGERO
-                        <div id="ticket-name"></div>
+                        <!-- DATA OUTPUT -->
+                        <h3>DETTAGLIO PASSEGGERI</h3>
+                        <div class="data-output">
+
+                            <!-- Username Output -->
+                            <div>
+                                NOME DEL PASSEGGERO
+                                <div id="ticket-name"></div>
+                            </div>
+                            
+                            <!-- Table Output -->
+                            <table>
+
+                                <!-- Row Head -->
+                                <tr>
+                                    <th>Offerta</th>
+                                    <th>Carrozza</th>
+                                    <th>Codice CP</th>
+                                    <th>Costo Biglietto</th>
+                                </tr>
+                                
+                                <!-- Row Data -->
+                                <tr>
+                                    <td id="ticket-type"></td>
+                                    <td id="carriage"></td>
+                                    <td id="cp-code"></td>
+                                    <td id="ticket-price"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!------ end - Data Output ------>
                     </div>
-                    
-                    <!-- Table Output -->
-                    <table>
-
-                        <!-- Row Head -->
-                        <tr>
-                            <th>Offerta</th>
-                            <th>Carrozza</th>
-                            <th>Codice CP</th>
-                            <th>Costo Biglietto</th>
-                        </tr>
-                        
-                        <!-- Row Data -->
-                        <tr>
-                            <td id="ticket-type"></td>
-                            <td id="carriage"></td>
-                            <td id="cp-code"></td>
-                            <td id="ticket-price"></td>
-                        </tr>
-                    </table>
-                </div>
-                <!------ end - Data Output ------>
                 </div>   
         </section>
     </main>

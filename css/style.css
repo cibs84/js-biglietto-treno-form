@@ -5,22 +5,63 @@
     padding: 0;
 }
 
+
+/* COMMON */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
 h1, h2 {
     text-align: center;
-    margin: 2rem 0;
+    color: white;
 }
-.form-ticket {
-    margin: 1.5rem 0;
+table {
+    padding: 1.5rem;
+}
+table tr > * {
+    padding-bottom: 3rem;
+    padding-right: 3rem;
 }
 .container {
     width: 70%;
     margin: 0 auto;
 }
+label {
+    color: #b91450;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.ticket-input button {
+    align-self: flex-end;
+    margin: 0 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.3rem 0.3rem;
+    color: #b91450;
+    border-radius: 0.3rem;
+    background-color: #cccccc;
+    border: 1px solid black;
+}
+.form-ticket {
+    display: inline-block;
+    margin: 0 2rem 3rem;
+}
+.form-ticket > * {
+    display: block;
+}
+.form-ticket > *:last-child {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.3rem;
+    border: 1px solid #b91450;
+    border-radius: 0.3rem;
+    width: 11rem;
+}
 .data-output {
     display: flex;
-}
-table {
-    border-spacing: 1.5rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 h2, #your-ticket {
     display: none;
@@ -28,4 +69,42 @@ h2, #your-ticket {
 h2.active,
 #your-ticket.active {
     display: block;
+}
+
+
+/* HEADER */
+header {
+    background-color: #b91450;
+    padding: 1rem 0;
+}
+
+
+/* MAIN */
+main {
+    background-color: #b91450;
+}
+#calculate-ticket {
+    padding-bottom: 2rem;
+}
+#calculate-ticket .ticket-input,
+#your-ticket .ticket-output {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 10px #888888;
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+}
+#your-ticket {
+    padding-bottom: 4rem;
+}
+#your-ticket .ticket-output {
+    text-align: left;
+    border-radius: 0;
+}
+#your-ticket .ticket-output .data-output > div {
+    background-color: #888888;
+    padding: 1.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
 }
