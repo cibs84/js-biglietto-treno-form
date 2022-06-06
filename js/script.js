@@ -26,7 +26,7 @@ genBtn.addEventListener('click',
             ticketType = 'Biglietto Over 65';
         }
 
-        document.getElementById('user-name').innerHTML = userName;
+        document.getElementById('ticket-name').innerHTML = userName;
         document.getElementById('ticket-type').innerHTML = ticketType;
 
         const carriage = Math.floor(Math.random() * 20) + 1;
@@ -35,7 +35,7 @@ genBtn.addEventListener('click',
         const cpCode = Math.floor(Math.random() * 99000) + 1;
         document.getElementById('cp-code').innerHTML = cpCode;
         
-        document.getElementById('price-ticket').innerHTML = `${price.toFixed(2)}€`;
+        document.getElementById('ticket-price').innerHTML = `${price.toFixed(2)}€`;
         document.getElementById('your-ticket').classList.toggle('active');
         document.querySelector('h2').classList.toggle('active');
     }
