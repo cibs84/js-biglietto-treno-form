@@ -25,6 +25,7 @@ table {
 h2, #your-ticket {
     display: none;
 }
-.active {
+h2.active,
+#your-ticket.active {
     display: block;
 }

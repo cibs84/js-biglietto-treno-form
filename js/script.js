@@ -16,14 +16,28 @@ genBtn.addEventListener('click',
         
         // LOGICA - CREAZIONE PREZZI STANDARD, MINORENNI, OVER_65
         let price = userKm * 0.21;
+        let ticketType = 'Biglietto Standard';
 
         if (userAge === 'minorenne') {
             price *= 0.8;
+            ticketType = 'Biglietto Minorenne';
         } else if (userAge === 'over') {
             price *= 0.6;
+            ticketType = 'Biglietto Over 65';
         }
 
-        console.log(price);
+        document.getElementById('user-name').innerHTML = userName;
+        document.getElementById('ticket-type').innerHTML = ticketType;
+
+        const carriage = Math.floor(Math.random() * 20) + 1;
+        document.getElementById('carriage').innerHTML = carriage;
+
+        const cpCode = Math.floor(Math.random() * 99000) + 1;
+        document.getElementById('cp-code').innerHTML = cpCode;
+        
+        document.getElementById('price-ticket').innerHTML = `${price.toFixed(2)}€`;
+        document.getElementById('your-ticket').classList.toggle('active');
+        document.querySelector('h2').classList.toggle('active');
     }
 );
 
