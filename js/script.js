@@ -26,6 +26,7 @@ genBtn.addEventListener('click',
             ticketType = 'Biglietto Over 65';
         }
 
+        // OUTPUT - STAMPA SU HTML: NOME DEL PASSEGGERO, OFFERTA, CARROZZA, CODICE CP, COSTO BIGLIETTO
         document.getElementById('ticket-name').innerHTML = userName;
         document.getElementById('ticket-type').innerHTML = ticketType;
 
@@ -41,6 +42,19 @@ genBtn.addEventListener('click',
     }
 );
 
+let cancBtn = document.getElementById('cancel-btn');
+
+cancBtn.addEventListener('click',
+    function(){
+        document.getElementById('ticket-name').value = '';
+        document.getElementById('ticket-type').value = 'maggiorenne';
+        document.getElementById('carriage').value = '';
+        document.getElementById('cp-code').value = '';
+        document.getElementById('ticket-price').value = '';
+
+        document.getElementById('your-ticket').classList.remove('active');
+        document.querySelector('h2').classList.remove('active');
+    }
+);
 
 
-// STAMPA SU HTML IL NOME DEL PASSEGGERO, OFFERTA, CARROZZA, CODICE CP, COSTO BIGLIETTO
