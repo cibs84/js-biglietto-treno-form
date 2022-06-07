@@ -6,9 +6,9 @@
 // Il recap dei dati e l'output del prezzo finale va stampato in pagina (formattato con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
 // GENERATE BUTTON'S FUNCTION
-let genBtn = document.getElementById('generate-btn');
+let generateBtn = document.getElementById('generate-btn');
 
-genBtn.addEventListener('click',
+generateBtn.addEventListener('click',
     function () {
         // RACCOLTA DATI di: NOME E COGNOME, KM DA PERCORRERE, FASCIA D'ETA'
         const userName = document.getElementById('user-name').value;
@@ -39,8 +39,8 @@ genBtn.addEventListener('click',
         document.getElementById('ticket-price').innerHTML = `${price.toFixed(2)}€`;
 
         // Attribuzione classe 'active' agli elementi html per visualizzare i dati del biglietto
-        document.getElementById('your-ticket').classList.toggle('active');
-        document.querySelector('h2').classList.toggle('active');
+        document.getElementById('your-ticket').classList.add('active');
+        document.querySelector('h2').classList.add('active');
     }
 );
 
@@ -50,8 +50,11 @@ let cancBtn = document.getElementById('cancel-btn');
 cancBtn.addEventListener('click',
     function(){
         // RESET INPUTS VALUES
+        document.getElementById('user-name').value = '';
+        document.getElementById('user-km').value = '';
+        document.getElementById('user-age').value = 'maggiorenne';
         document.getElementById('ticket-name').value = '';
-        document.getElementById('ticket-type').value = 'maggiorenne';
+        document.getElementById('ticket-type').value = '';
         document.getElementById('carriage').value = '';
         document.getElementById('cp-code').value = '';
         document.getElementById('ticket-price').value = '';

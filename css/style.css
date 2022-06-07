@@ -18,8 +18,10 @@ table {
     padding: 1.5rem;
 }
 table tr > * {
+    width: 9rem;
+}
+table tr th {
     padding-bottom: 3rem;
-    padding-right: 3rem;
 }
 .container {
     width: 70%;
@@ -31,7 +33,7 @@ label {
     margin-bottom: 1rem;
     font-weight: 600;
 }
-.ticket-input button {
+.user-form button {
     align-self: flex-end;
     margin: 0 0.5rem;
     font-size: 1.1rem;
@@ -42,14 +44,14 @@ label {
     background-color: #cccccc;
     border: 1px solid black;
 }
-.form-ticket {
+.form-item {
     display: inline-block;
     margin: 0 2rem 3rem;
 }
-.form-ticket > * {
+.form-item > * {
     display: block;
 }
-.form-ticket > *:last-child {
+.form-item > *:last-child {
     text-align: center;
     font-size: 1rem;
     font-weight: 600;
@@ -86,7 +88,7 @@ main {
 #calculate-ticket {
     padding-bottom: 2rem;
 }
-#calculate-ticket .ticket-input,
+#calculate-ticket .user-form,
 #your-ticket .ticket-output {
     background-color: white;
     border-radius: 1rem;
